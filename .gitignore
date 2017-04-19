@@ -40,6 +40,10 @@ yarn-error.log
 #
 lib/
 
+# Jest
+#
+.jest/
+
 # BUCK
 buck-out/
 \.buckd/

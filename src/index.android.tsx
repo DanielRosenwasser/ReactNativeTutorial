@@ -3,7 +3,7 @@
  * https://github.com/facebook/react-native
  */
 
-import React, { Component } from 'react';
+import * as React from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -11,7 +11,7 @@ import {
   View
 } from 'react-native';
 
-export default class ReactNativeTutorial extends Component<object, object> {
+export default class ReactNativeTutorial extends React.Component<object, object> {
   render() {
     return (
       <View style={styles.container}>
