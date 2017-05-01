@@ -2,6 +2,10 @@
 	"name": "ReactNativeTutorial",
 	"version": "0.0.1",
 	"private": true,
+	"author": {
+		"name": "Daniel Rosenwasser",
+		"url": "https://github.com/DanielRosenwasser"
+	},
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest"
