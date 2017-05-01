@@ -8,8 +8,14 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import Hello from './containers/Hello'
+import { StoreState } from './types';
+import { enthusiasm } from './reducers'
 
 export default class ReactNativeTutorial extends React.Component<object, object> {
   render() {
@@ -25,6 +31,9 @@ export default class ReactNativeTutorial extends React.Component<object, object>
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <Provider store={store}>
+          <Hello />
+        </Provider>
       </View>
     );
   }
@@ -47,6 +56,11 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+});
+
+const store = createStore<StoreState>(enthusiasm, {
+  enthusiasmLevel: 1,
+  languageName: 'TypeScript',
 });
 
 AppRegistry.registerComponent('ReactNativeTutorial', () => ReactNativeTutorial);
